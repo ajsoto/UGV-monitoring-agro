@@ -1,0 +1,2465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.BubbleChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="927.0" style="-fx-background-color: #A9A9A9;" stylesheets="@prueba.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane fx:id="menuPanel" layoutY="590.0" prefHeight="72.0" prefWidth="854.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="590.0">
+         <children>
+            <HBox prefHeight="77.0" prefWidth="854.0" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <AnchorPane prefHeight="53.0" prefWidth="40.0">
+                     <children>
+                        <Label layoutX="1.0" layoutY="42.0" onMouseClicked="#BotonInicio" text="Inicio">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="43.0" fitWidth="40.0" layoutY="3.0" onMouseClicked="#BotonInicio" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_inicio.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <AnchorPane prefHeight="69.0" prefWidth="72.0">
+                     <children>
+                        <ImageView fitHeight="43.0" fitWidth="40.0" layoutX="27.0" layoutY="3.0" onMouseClicked="#BotonBasedeDatos" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="27.0">
+                           <image>
+                              <Image url="@images/icons_base.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label layoutX="1.0" layoutY="42.0" onMouseClicked="#BotonBasedeDatos" text="Base de datos">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <AnchorPane prefHeight="69.0" prefWidth="72.0">
+                     <children>
+                        <ImageView fitHeight="43.0" fitWidth="40.0" layoutX="27.0" layoutY="3.0" onMouseClicked="#BotonCaracteristicasdelSuelo" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="27.0">
+                           <image>
+                              <Image url="@images/icons_tierra.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label layoutX="1.0" layoutY="35.0" onMouseClicked="#BotonCaracteristicasdelSuelo" text="Características &#10;del suelo" textAlignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="43.0" fitWidth="40.0" layoutX="44.0" layoutY="3.0" onMouseClicked="#BotonMapadeIntensidad" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_mapa.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label layoutY="42.0" onMouseClicked="#BotonMapadeIntensidad" text="Mapa de intensidad" textAlignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <AnchorPane prefHeight="62.0" prefWidth="47.0">
+                     <children>
+                        <ImageView fitHeight="43.0" fitWidth="40.0" layoutX="10.0" layoutY="3.0" onMouseClicked="#BotonGrafica" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_graficar.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label layoutX="1.0" layoutY="42.0" onMouseClicked="#BotonGrafica" text="Gráficas" textAlignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="43.0" fitWidth="40.0" layoutX="20.0" onMouseClicked="#BotonEstadistica" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_estadistica.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label layoutX="3.0" layoutY="42.0" onMouseClicked="#BotonEstadistica" text="Estadística" textAlignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="43.0" fitWidth="40.0" layoutX="4.0" layoutY="3.0" onMouseClicked="#BotonAyuda" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_ayuda.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label layoutX="2.0" layoutY="42.0" onMouseClicked="#BotonAyuda" text="Ayuda" textAlignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="43.0" fitWidth="40.0" layoutX="4.0" layoutY="3.0" onMouseClicked="#BotonSalida" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_salida.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label layoutX="3.0" layoutY="42.0" onMouseClicked="#BotonSalida" text="Salida" textAlignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Separator prefWidth="200.0" visible="false" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="inicioPanel" prefHeight="583.0" prefWidth="927.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="83.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="154.0" fitWidth="202.0" layoutX="12.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="425.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="713.0" AnchorPane.topAnchor="1.0">
+               <image>
+                  <Image url="@images/logo_ufps.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="238.0" layoutY="14.0" prefHeight="50.0" prefWidth="451.0" text="UNIVERSIDAD FRANCISCO DE PAULA SANTANDER&#10;" textAlignment="CENTER" AnchorPane.bottomAnchor="515.0" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="238.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="226.0" layoutY="81.0" prefHeight="50.0" prefWidth="479.0" text="MONITOREO DEL CULTIVO DE TOMATE&#10;EN LA HACIENDA LA ESPERANZA VEREDA PANTANOS &#10;&#10;" textAlignment="CENTER" AnchorPane.bottomAnchor="448.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="222.0" AnchorPane.topAnchor="81.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="351.0" fitWidth="381.0" layoutX="45.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/UGV_SISTEMA.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="10.0" layoutY="166.0" prefHeight="61.0" prefWidth="432.0" text="Sistema Embebido para Mediciones Agrónomas No Tripulado &#10; SEMANT&#10;" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="452.0" layoutY="204.0" prefHeight="178.0" prefWidth="423.0" text="El objetivo del proyecto fue contruir un sistema de monitoreo &#10;inalambrico que le permita al agricultor observar el estado en &#10;el que se encuentra el cultivo de tomate en tiempo real y/o &#10;con registros a traves de una base de datos, con la finalidad &#10;de tomar decisiones que permitan mejorar la calidad del &#10;producto y a su vez optimizar los costos de mantenimiento &#10;de la siembra.&#10;&#10;" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="616.0" layoutY="172.0" prefHeight="45.0" prefWidth="135.0" text="OBJETIVO" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Line endX="341.0" layoutX="543.0" layoutY="383.0" startX="-100.0" />
+            <Label layoutX="519.0" layoutY="383.0" prefHeight="45.0" prefWidth="322.0" text="VISUALIZACIÓN DE LOS DATOS DE MEDICIÓN &#10;EN TIEMPO REAL" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="576.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons_detalles.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="BotonComenzar" fitHeight="34.0" fitWidth="34.0" layoutX="546.0" layoutY="440.0" onMouseClicked="#botonInicio" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons_comenzar.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="BotonDetener" fitHeight="41.0" fitWidth="55.0" layoutX="751.0" layoutY="437.0" onMouseClicked="#botonFin" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/icons_detener.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="523.0" layoutY="467.0" prefHeight="25.0" prefWidth="106.0" text="COMENZAR&#10;" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="742.0" layoutY="467.0" prefHeight="25.0" prefWidth="79.0" text="DETENER&#10;" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="43.0" layoutX="464.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons_interfaz.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="586.0" layoutY="492.0" prefHeight="61.0" prefWidth="260.0" text="La información recolectada&#10; se encuentra en \Datos_SEMANT" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="41.0" fitWidth="38.0" layoutX="532.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons_carpeta.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="basededatosPanel" prefHeight="551.0" prefWidth="854.0" style="-fx-background-color: #ffffff;" visible="false" AnchorPane.bottomAnchor="83.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="154.0" fitWidth="202.0" layoutX="12.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="425.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="713.0" AnchorPane.topAnchor="1.0">
+               <image>
+                  <Image url="@images/logo_ufps.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="248.0" layoutY="34.0" prefHeight="43.0" prefWidth="395.0" text="HACIENDA LA ESPERANZA VEREDA PANTANOS&#10;&#10;" textAlignment="CENTER" AnchorPane.bottomAnchor="502.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="284.0" AnchorPane.topAnchor="34.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="255.0" layoutY="85.0" prefHeight="40.0" prefWidth="364.0" text="BASE DE DATOS EN EL CULTIVO DE TOMATE&#10;&#10;" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <TableView fx:id="basededatosTabla" layoutX="29.0" layoutY="214.0" prefHeight="351.0" prefWidth="856.0">
+              <columns>
+                  <TableColumn fx:id="diaColumna" prefWidth="114.0" text="Día">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_calendario.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                <TableColumn fx:id="horaColumna" prefWidth="87.0" text="Hora">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_hora.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                <TableColumn fx:id="tempColumna" prefWidth="108.0" text="Temperatura &#10;&#9;°C">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_temperatura.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="humColumna" prefWidth="107.0" text="Humedad &#10;        %">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_humedad.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="coColumna" prefWidth="100.0" text="CO2&#10;ppm">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_co2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="uvColumna" prefWidth="96.0" text="Indice&#10;  UV">
+                     <graphic>
+                        <ImageView fitHeight="43.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_indiceuv.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></TableColumn>
+                  <TableColumn fx:id="latColumna" prefWidth="123.0" text="Latitud">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_latitud.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="logColumna" prefWidth="120.0" text="Longitud">
+                     <graphic>
+                        <ImageView fitHeight="65.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_longitud.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+              </columns>
+            </TableView>
+            <Label layoutX="22.0" layoutY="164.0" prefHeight="40.0" prefWidth="202.0" text="Selecciona el rango de fecha:&#10;&#10;" textAlignment="CENTER" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="703.0" AnchorPane.topAnchor="164.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="363.0" layoutY="163.0" prefHeight="40.0" prefWidth="48.0" text="hasta:&#10;&#10;" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="168.0" fitWidth="230.0" layoutX="678.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="410.0" AnchorPane.leftAnchor="678.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@images/UGV_SISTEMA.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="BotonAceptarData" disable="true" layoutX="553.0" layoutY="168.0" onAction="#Aceptar" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.8; -fx-background-radius: 10;" text="Aceptar">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXComboBox fx:id="ComboFechaData" focusColor="#405aa800" layoutX="245.0" layoutY="171.0" onAction="#BotonFechaBase" prefHeight="25.0" prefWidth="109.0" promptText="AA/MM/DD" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5; -fx-background-radius: 10;" unFocusColor="#4d4d4d00">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+            <JFXComboBox fx:id="ComboFechaDataDos" disable="true" focusColor="#405aa800" layoutX="421.0" layoutY="171.0" onAction="#BotonFechaBaseDos" prefHeight="25.0" prefWidth="109.0" promptText="AA/MM/DD" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5; -fx-background-radius: 10;" unFocusColor="#4d4d4d00">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+         </children></AnchorPane>
+      <AnchorPane fx:id="CaracteristicasdelSueloPanel" layoutX="10.0" layoutY="10.0" prefHeight="583.0" prefWidth="927.0" style="-fx-background-color: #ffffff;" visible="false" AnchorPane.bottomAnchor="83.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="154.0" fitWidth="202.0" layoutX="12.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="425.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="713.0" AnchorPane.topAnchor="1.0">
+               <image>
+                  <Image url="@images/logo_ufps.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="168.0" fitWidth="230.0" layoutX="678.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="410.0" AnchorPane.leftAnchor="678.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@images/UGV_SISTEMA.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="224.0" layoutY="34.0" prefHeight="43.0" prefWidth="395.0" text="HACIENDA LA ESPERANZA VEREDA PANTANOS &#10;&#10;" textAlignment="CENTER" AnchorPane.bottomAnchor="502.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="284.0" AnchorPane.topAnchor="34.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="259.0" layoutY="77.0" prefHeight="50.0" prefWidth="373.0" text="CARACTERÍSTICAS DEL SUELO EN EL CULTIVO &#10;DE TOMATE" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="BotonAceptarSuelo" disable="true" layoutX="553.0" layoutY="168.0" onAction="#Aceptar" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.8; -fx-background-radius: 10;" text="Aceptar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXComboBox fx:id="ComboFechaSuelo" focusColor="#405aa800" layoutX="245.0" layoutY="168.0" onAction="#BotonFechaSuelo" prefHeight="25.0" prefWidth="109.0" promptText="AA/MM/DD" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5; -fx-background-radius: 10;" unFocusColor="#4d4d4d00">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXComboBox>
+            <JFXComboBox fx:id="ComboFechaSueloDos" disable="true" focusColor="#405aa800" layoutX="421.0" layoutY="168.0" onAction="#BotonFechaSueloDos" prefHeight="25.0" prefWidth="109.0" promptText="AA/MM/DD" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5; -fx-background-radius: 10;" unFocusColor="#4d4d4d00">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXComboBox>
+            <Label layoutX="22.0" layoutY="167.0" prefHeight="40.0" prefWidth="202.0" text="Selecciona el rango de fecha:&#10;&#10;" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="363.0" layoutY="166.0" prefHeight="40.0" prefWidth="48.0" text="hasta:&#10;&#10;" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TableView fx:id="SueloTabla" layoutX="15.0" layoutY="234.0" prefHeight="313.0" prefWidth="451.0">
+              <columns>
+                <TableColumn fx:id="diaSColumna" prefWidth="84.0" text="Día">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_calendario.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                <TableColumn fx:id="horaSColumna" prefWidth="89.0" text="Hora">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_hora.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></TableColumn>
+                  <TableColumn fx:id="HumeSueColumna" prefWidth="109.0" text="  Humedad &#10;del Suelo (%)">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_seco.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></TableColumn>
+                  <TableColumn fx:id="latSColumna" prefWidth="79.0" text="Latitud">
+                     <graphic>
+                        <ImageView fitHeight="66.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_latitud.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></TableColumn>
+                  <TableColumn fx:id="longSColumna" prefWidth="89.0" text="Longitud">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_longitud.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></TableColumn>
+              </columns>
+            </TableView>
+            <LineChart fx:id="Suelografica" layoutX="499.0" layoutY="278.0" prefHeight="246.0" prefWidth="358.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="SueloYAxis" side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <Label fx:id="UnidadHumSuelo" layoutX="486.0" layoutY="255.0" prefHeight="40.0" prefWidth="55.0" text="HA (%)" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="UnidadMuestrasSuelo" layoutX="844.0" layoutY="469.0" prefHeight="55.0" prefWidth="55.0" text="Número&#10;de&#10;muestra" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="mapadeintensidadPanel" layoutX="30.0" layoutY="30.0" prefHeight="583.0" prefWidth="927.0" style="-fx-background-color: #ffffff;" visible="false" AnchorPane.bottomAnchor="83.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="256.0" layoutY="77.0" prefHeight="48.0" prefWidth="402.0" text="MAPA DE INTENSIDAD PARA LAS VARIABLES &#10;DEL CULTIVO DE TOMATE" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="154.0" fitWidth="202.0" layoutX="12.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="425.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="713.0" AnchorPane.topAnchor="1.0">
+               <image>
+                  <Image url="@images/logo_ufps.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="168.0" fitWidth="230.0" layoutX="678.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="410.0" AnchorPane.leftAnchor="678.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@images/UGV_SISTEMA.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="274.0" layoutY="40.0" prefHeight="40.0" prefWidth="423.0" text="HACIENDA LA ESPERANZA VEREDA PANTANOS &#10;&#10;" textAlignment="CENTER" AnchorPane.bottomAnchor="505.0" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="259.0" AnchorPane.topAnchor="34.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <VBox fx:id="variablesMapas" disable="true" layoutX="14.0" layoutY="215.0" prefHeight="368.0" prefWidth="135.0">
+               <children>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="35.0" layoutX="94.0" layoutY="2.0" onMouseClicked="#Botontem" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_temperatura.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label onMouseClicked="#Botontem" text="Temperatura &#10;del aire" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="45.0" layoutX="85.0" layoutY="2.0" onMouseClicked="#Botonhum" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_humedad.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label layoutX="14.0" onMouseClicked="#Botonhum" prefHeight="50.0" prefWidth="80.0" text="Humedad&#10;del aire" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="45.0" layoutX="83.0" layoutY="2.0" onMouseClicked="#Botonco2" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_co2.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label layoutX="14.0" onMouseClicked="#Botonco2" prefHeight="40.0" prefWidth="80.0" text="Dioxido de&#10;carbono" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="45.0" layoutX="81.0" onMouseClicked="#BotonhumSuelo" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_seco.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label layoutX="14.0" layoutY="3.0" onMouseClicked="#BotonhumSuelo" text="Humedad&#10;del suelo" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="45.0" layoutX="79.0" onMouseClicked="#Botonindice" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_indiceuv.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label layoutX="11.0" layoutY="2.0" onMouseClicked="#Botonindice" text="Índice&#10;ultravioleta" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+               </children>
+            </VBox>
+            <AnchorPane fx:id="temPanel" layoutX="169.0" layoutY="186.0" prefHeight="383.0" prefWidth="726.0" style="-fx-border-color: #000000; -fx-border-width: 3;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="169.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="186.0">
+               <children>
+                  <AnchorPane fx:id="ColoresRangos" layoutX="6.0" layoutY="120.0" prefHeight="168.0" prefWidth="126.0" style="-fx-background-color: #ffffff; -fx-border-color: #808080; -fx-border-width: 2; -fx-border-radius: 3; -fx-background-radius: 3;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FFD700; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="145.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FF7F50; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="25.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #CD5C5C; -fx-background-radius: 5;" AnchorPane.bottomAnchor="5.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FFFF00; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="125.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #9ACD32; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="45.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #90EE90; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="65.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #4682B4; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="85.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #AFEEEE; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="105.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="MapasTemp" layoutX="6.0" layoutY="120.0" prefHeight="168.0" prefWidth="126.0" style="-fx-background-color: #ffffff; -fx-border-color: #808080; -fx-border-width: 2; -fx-border-radius: 3; -fx-background-radius: 3;" visible="false">
+                     <children>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FFD700; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="145.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FF7F50; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="25.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #CD5C5C; -fx-background-radius: 5;" AnchorPane.bottomAnchor="5.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="8.0" prefHeight="13.0" prefWidth="87.0" text="≤ 17 °C" textAlignment="CENTER" AnchorPane.bottomAnchor="145.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="28.0" prefHeight="13.0" prefWidth="87.0" text="17 ~ 20°C" textAlignment="CENTER" AnchorPane.bottomAnchor="125.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="48.0" prefHeight="13.0" prefWidth="87.0" text="20 ~ 23 °C" AnchorPane.bottomAnchor="105.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="68.0" prefHeight="13.0" prefWidth="87.0" text="23 ~ 26 °C" AnchorPane.bottomAnchor="85.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="88.0" prefHeight="13.0" prefWidth="87.0" text="26 ~ 29 °C" AnchorPane.bottomAnchor="65.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FFFF00; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="125.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #9ACD32; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="45.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #90EE90; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="65.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #4682B4; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="85.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #AFEEEE; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="105.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="108.0" prefHeight="13.0" prefWidth="87.0" text="29 ~ 32 °C" AnchorPane.bottomAnchor="45.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="128.0" prefHeight="13.0" prefWidth="87.0" text="32 ~ 35 °C" AnchorPane.bottomAnchor="25.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="148.0" prefHeight="14.0" prefWidth="84.0" text="&gt; 35 °C" AnchorPane.bottomAnchor="7.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="MapasHum" layoutX="6.0" layoutY="120.0" prefHeight="168.0" prefWidth="126.0" style="-fx-background-color: #ffffff; -fx-border-color: #808080; -fx-border-width: 2; -fx-border-radius: 3; -fx-background-radius: 3;" visible="false">
+                     <children>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FFD700; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="145.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FF7F50; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="25.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #CD5C5C; -fx-background-radius: 5;" AnchorPane.bottomAnchor="5.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="8.0" prefHeight="13.0" prefWidth="87.0" text="≤ 65 %" textAlignment="CENTER" AnchorPane.bottomAnchor="145.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="28.0" prefHeight="13.0" prefWidth="87.0" text="65 ~ 66.67 %" textAlignment="CENTER" AnchorPane.bottomAnchor="125.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="48.0" prefHeight="13.0" prefWidth="87.0" text="66.67 ~ 68.33 %" AnchorPane.bottomAnchor="105.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="68.0" prefHeight="13.0" prefWidth="87.0" text="68.33 ~ 70 %" AnchorPane.bottomAnchor="85.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="88.0" prefHeight="13.0" prefWidth="87.0" text="70 ~ 71.67 %" AnchorPane.bottomAnchor="65.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FFFF00; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="125.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #9ACD32; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="45.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #90EE90; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="65.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #4682B4; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="85.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #AFEEEE; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="105.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="108.0" prefHeight="13.0" prefWidth="87.0" text="71.67 ~ 73.33 %" AnchorPane.bottomAnchor="45.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="128.0" prefHeight="13.0" prefWidth="87.0" text="73.33 ~ 75 %" AnchorPane.bottomAnchor="25.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="148.0" prefHeight="14.0" prefWidth="84.0" text="&gt; 75 %" AnchorPane.bottomAnchor="7.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="MapasCO2" layoutX="6.0" layoutY="120.0" prefHeight="168.0" prefWidth="126.0" style="-fx-background-color: #ffffff; -fx-border-color: #808080; -fx-border-width: 2; -fx-border-radius: 3; -fx-background-radius: 3;" visible="false">
+                     <children>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FFD700; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="145.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FF7F50; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="25.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #CD5C5C; -fx-background-radius: 5;" AnchorPane.bottomAnchor="5.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="8.0" prefHeight="13.0" prefWidth="87.0" text="≤ 400 ppm" textAlignment="CENTER" AnchorPane.bottomAnchor="145.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="28.0" prefHeight="13.0" prefWidth="87.0" text="400 ~ 500 ppm" textAlignment="CENTER" AnchorPane.bottomAnchor="125.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="48.0" prefHeight="13.0" prefWidth="87.0" text="500 ~ 600 ppm" AnchorPane.bottomAnchor="105.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="68.0" prefHeight="13.0" prefWidth="87.0" text="600 ~ 700 ppm" AnchorPane.bottomAnchor="85.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="88.0" prefHeight="13.0" prefWidth="87.0" text="700 ~ 800 ppm" AnchorPane.bottomAnchor="65.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FFFF00; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="125.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #9ACD32; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="45.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #90EE90; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="65.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #4682B4; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="85.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #AFEEEE; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="105.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="108.0" prefHeight="13.0" prefWidth="87.0" text="800 ~ 900 ppm" AnchorPane.bottomAnchor="45.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="128.0" prefHeight="13.0" prefWidth="87.0" text="900 ~ 1000 ppm" AnchorPane.bottomAnchor="25.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="148.0" prefHeight="14.0" prefWidth="84.0" text="&gt; 1000 ppm" AnchorPane.bottomAnchor="7.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="MapasSuelo" layoutX="6.0" layoutY="120.0" prefHeight="168.0" prefWidth="126.0" style="-fx-background-color: #ffffff; -fx-border-color: #808080; -fx-border-width: 2; -fx-border-radius: 3; -fx-background-radius: 3;" visible="false">
+                     <children>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FFD700; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="145.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FF7F50; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="25.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #CD5C5C; -fx-background-radius: 5;" AnchorPane.bottomAnchor="5.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="8.0" prefHeight="13.0" prefWidth="87.0" text="≤ 25 %" textAlignment="CENTER" AnchorPane.bottomAnchor="145.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="28.0" prefHeight="13.0" prefWidth="87.0" text="25 ~ 27.5 %" textAlignment="CENTER" AnchorPane.bottomAnchor="125.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="48.0" prefHeight="13.0" prefWidth="87.0" text="27.5 ~ 30 %" AnchorPane.bottomAnchor="105.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="68.0" prefHeight="13.0" prefWidth="87.0" text="30 ~ 32.5%" AnchorPane.bottomAnchor="85.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="88.0" prefHeight="13.0" prefWidth="87.0" text="32.5 ~ 35 %" AnchorPane.bottomAnchor="65.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FFFF00; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="125.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #9ACD32; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="45.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #90EE90; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="65.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #4682B4; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="85.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #AFEEEE; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="105.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="108.0" prefHeight="13.0" prefWidth="87.0" text="35 ~ 37.5 %" AnchorPane.bottomAnchor="45.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="128.0" prefHeight="13.0" prefWidth="87.0" text="37.5 ~ 40 %" AnchorPane.bottomAnchor="25.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="148.0" prefHeight="14.0" prefWidth="84.0" text="&gt; 40 %" AnchorPane.bottomAnchor="7.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="MapasUV" layoutX="6.0" layoutY="120.0" prefHeight="168.0" prefWidth="126.0" style="-fx-background-color: #ffffff; -fx-border-color: #808080; -fx-border-width: 2; -fx-border-radius: 3; -fx-background-radius: 3;" visible="false">
+                     <children>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FFD700; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="145.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FF7F50; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="25.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #CD5C5C; -fx-background-radius: 5;" AnchorPane.bottomAnchor="5.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="8.0" prefHeight="13.0" prefWidth="87.0" text="≤ 3" textAlignment="CENTER" AnchorPane.bottomAnchor="145.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="28.0" prefHeight="13.0" prefWidth="87.0" text="4" textAlignment="CENTER" AnchorPane.bottomAnchor="125.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="48.0" prefHeight="13.0" prefWidth="87.0" text="5" AnchorPane.bottomAnchor="105.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="68.0" prefHeight="13.0" prefWidth="87.0" text="6" AnchorPane.bottomAnchor="85.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="88.0" prefHeight="13.0" prefWidth="87.0" text="7" AnchorPane.bottomAnchor="65.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #FFFF00; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="125.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #9ACD32; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="45.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #90EE90; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="65.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #4682B4; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="85.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: #AFEEEE; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.bottomAnchor="105.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="108.0" prefHeight="13.0" prefWidth="87.0" text="8" AnchorPane.bottomAnchor="45.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="128.0" prefHeight="13.0" prefWidth="87.0" text="9" AnchorPane.bottomAnchor="25.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="148.0" prefHeight="14.0" prefWidth="84.0" text="&gt; 10" AnchorPane.bottomAnchor="7.0">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <BubbleChart fx:id="Mapas" horizontalGridLinesVisible="false" layoutX="118.0" layoutY="-7.0" legendVisible="false" prefHeight="399.0" prefWidth="608.0" stylesheets="@prueba.css" verticalGridLinesVisible="false">
+                    <xAxis>
+                      <NumberAxis fx:id="mapasXAxis" minorTickVisible="false" side="BOTTOM" tickLabelsVisible="false" tickMarkVisible="false" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="mapasYAxis" minorTickVisible="false" side="LEFT" tickLabelsVisible="false" tickMarkVisible="false" />
+                    </yAxis>
+                  </BubbleChart>
+                  <Label layoutX="11.0" layoutY="75.0" prefHeight="45.0" prefWidth="116.0" text="Distribucción de&#10;rangos" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <ImageView fx:id="temFlecha" fitHeight="25.0" fitWidth="9.0" layoutX="157.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/icons_flechaa.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="humFlecha" fitHeight="25.0" fitWidth="9.0" layoutX="157.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/icons_flechaa.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="co2Flecha" fitHeight="25.0" fitWidth="9.0" layoutX="157.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/icons_flechaa.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="humSueFlecha" fitHeight="25.0" fitWidth="9.0" layoutX="157.0" layoutY="457.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/icons_flechaa.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="indiceFlecha" fitHeight="25.0" fitWidth="9.0" layoutX="157.0" layoutY="527.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/icons_flechaa.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="35.0" layoutY="149.0" prefHeight="38.0" prefWidth="497.0" text="Seleccione la fecha y variable que desea realizar el mapa de intensidad:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="ComboMapas" focusColor="#405aa800" layoutX="27.0" layoutY="187.0" onAction="#BotonFechaMapas" prefHeight="25.0" prefWidth="109.0" promptText="AA/MM/DD" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5; -fx-background-radius: 10;" unFocusColor="#4d4d4d00">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXComboBox>
+         </children></AnchorPane>
+      <AnchorPane fx:id="graficasPanel" layoutX="20.0" layoutY="20.0" prefHeight="583.0" prefWidth="927.0" style="-fx-background-color: #ffffff;" visible="false" AnchorPane.bottomAnchor="83.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="256.0" layoutY="87.0" prefHeight="48.0" prefWidth="402.0" text="GRAFICAS DE LAS VARIABLES DEL CULTIVO&#10;DE TOMATE" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="154.0" fitWidth="202.0" layoutX="12.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="425.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="713.0" AnchorPane.topAnchor="1.0">
+               <image>
+                  <Image url="@images/logo_ufps.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="168.0" fitWidth="230.0" layoutX="678.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="410.0" AnchorPane.leftAnchor="678.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@images/UGV_SISTEMA.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="264.0" layoutY="30.0" prefHeight="40.0" prefWidth="423.0" text="HACIENDA LA ESPERANZA VEREDA PANTANOS &#10;&#10;" textAlignment="CENTER" AnchorPane.bottomAnchor="505.0" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="259.0" AnchorPane.topAnchor="34.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="realgraficasPanel" layoutY="154.0" prefHeight="422.0" prefWidth="927.0" visible="false">
+               <children>
+                  <LineChart fx:id="TemGrafica" layoutX="161.0" layoutY="12.0" legendVisible="false" prefHeight="205.0" prefWidth="322.0">
+                     <xAxis>
+                        <CategoryAxis fx:id="TemXAxis" prefHeight="44.0" prefWidth="225.0" side="BOTTOM">
+                           <tickLabelFont>
+                              <Font name="Schadow BT Roman" size="10.0" />
+                           </tickLabelFont>
+                        </CategoryAxis>
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="TemYAxis" prefHeight="131.0" prefWidth="45.0" side="LEFT">
+                           <tickLabelFont>
+                              <Font name="Times New Roman" size="10.0" />
+                           </tickLabelFont>
+                        </NumberAxis>
+                     </yAxis>
+                  </LineChart>
+                  <LineChart fx:id="CO2Grafica" layoutY="203.0" legendVisible="false" prefHeight="205.0" prefWidth="322.0">
+                     <xAxis>
+                        <CategoryAxis prefHeight="44.0" prefWidth="225.0" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="CO2YAxis" prefHeight="154.0" prefWidth="41.0" side="LEFT" />
+                     </yAxis>
+                  </LineChart>
+                  <LineChart fx:id="HumGrafica" layoutX="577.0" layoutY="23.0" legendVisible="false" prefHeight="205.0" prefWidth="322.0">
+                     <xAxis>
+                        <CategoryAxis prefHeight="47.0" prefWidth="15.0" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="HumYAxis" prefHeight="154.0" prefWidth="41.0" side="LEFT" />
+                     </yAxis>
+                  </LineChart>
+                  <LineChart fx:id="UVGrafica" layoutX="369.0" layoutY="208.0" legendVisible="false" prefHeight="205.0" prefWidth="322.0">
+                     <xAxis>
+                        <CategoryAxis prefHeight="44.0" prefWidth="225.0" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="UVYAxis" prefHeight="154.0" prefWidth="41.0" side="LEFT" />
+                     </yAxis>
+                  </LineChart>
+                  <Label layoutX="276.0" layoutY="186.0" prefHeight="17.0" prefWidth="123.0" text="Número de muestras" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="261.0" layoutY="8.0" prefHeight="20.0" prefWidth="126.0" text="Temperatura del Aire" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="691.0" layoutY="14.0" prefHeight="35.0" prefWidth="126.0" text="Humedad del Aire" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="100.0" layoutY="194.0" prefHeight="35.0" prefWidth="116.0" text="Dióxido de Carbono" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="472.0" layoutY="199.0" prefHeight="35.0" prefWidth="126.0" text="Índice Ultravioleta" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="115.0" layoutY="380.0" prefHeight="17.0" prefWidth="126.0" text="Número de muestras" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="701.0" layoutY="197.0" prefHeight="17.0" prefWidth="126.0" text="Número de muestras" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="482.0" layoutY="385.0" prefHeight="17.0" prefWidth="123.0" text="Número de muestras" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="733.0" layoutY="254.0" prefHeight="40.0" prefWidth="94.0" text="MIDIENDO A&#10;TIEMPO REAL" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="rangograficasPanel" layoutY="154.0" prefHeight="422.0" prefWidth="927.0">
+               <children>
+                  <Label layoutX="22.0" layoutY="12.0" prefHeight="40.0" prefWidth="213.0" text="Selecciona el rango de fecha:&#10;&#10;" textAlignment="CENTER" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="703.0" AnchorPane.topAnchor="12.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="363.0" layoutY="12.0" prefHeight="40.0" prefWidth="48.0" text="hasta:" textAlignment="CENTER" AnchorPane.topAnchor="9.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="ComboFechaGrafica" focusColor="#405aa800" layoutX="245.0" layoutY="17.0" onAction="#BotonFechaGrafica" prefHeight="29.0" prefWidth="109.0" promptText="AA/MM/DD" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5; -fx-background-radius: 10;" unFocusColor="#4d4d4d00">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXComboBox>
+                  <JFXButton fx:id="BotonAceptarGraficas" disable="true" layoutX="553.0" layoutY="14.0" onAction="#Aceptar" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5; -fx-background-radius: 10;" text="Aceptar">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXComboBox fx:id="ComboFechaGraficaDos" disable="true" focusColor="#405aa800" layoutX="421.0" layoutY="17.0" onAction="#BotonFechaGraficaDos" prefHeight="29.0" prefWidth="109.0" promptText="AA/MM/DD" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5; -fx-background-radius: 10;" unFocusColor="#4d4d4d00">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXComboBox>
+                  <LineChart fx:id="rangoGraficas" layoutX="210.0" layoutY="45.0" prefHeight="340.0" prefWidth="666.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="graficaYAxis" side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <JFXRadioButton fx:id="TempGraficaRadio" disable="true" layoutX="10.0" layoutY="72.0" onAction="#graficarRadioButton" text="Temperatura del Aire">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <Label fx:id="UnidadTemp" layoutX="160.0" layoutY="164.0" prefHeight="40.0" prefWidth="55.0" rotate="270.0" text="TA (°C)" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXRadioButton fx:id="HumGraficaRadio" disable="true" layoutX="10.0" layoutY="104.0" onAction="#graficarRadioButton" text="Humedad del Aire">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <Label fx:id="UnidadHum" layoutX="160.0" layoutY="164.0" prefHeight="40.0" prefWidth="55.0" rotate="270.0" text="HA (%)" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXRadioButton fx:id="CO2GraficaRadio" disable="true" layoutX="10.0" layoutY="136.0" onAction="#graficarRadioButton" text="Dióxido de Carbono">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <Label fx:id="UnidadCO2" layoutX="155.0" layoutY="164.0" prefHeight="40.0" prefWidth="74.0" rotate="270.0" text="CO2 (ppm)" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXRadioButton fx:id="UVGraficaRadio" disable="true" layoutX="10.0" layoutY="167.0" onAction="#graficarRadioButton" text="Índice UV">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <Label fx:id="UnidadUV" layoutX="180.0" layoutY="164.0" prefHeight="40.0" prefWidth="34.0" rotate="270.0" text="IUV" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="UnidadMuestras" layoutX="863.0" layoutY="306.0" prefHeight="55.0" prefWidth="55.0" text="Número&#10;de&#10;muestra" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="estadisticaPanel" prefHeight="579.0" prefWidth="927.0" style="-fx-background-color: #ffffff;" visible="false" AnchorPane.bottomAnchor="83.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="249.0" layoutY="87.0" prefHeight="50.0" prefWidth="381.0" text="ANÁLISIS ESTADÍSTICO DE LAS VARIABLES &#10;DEL CULTIVO DE TOMATE" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="154.0" fitWidth="202.0" layoutX="12.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="398.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="713.0" AnchorPane.topAnchor="1.0">
+               <image>
+                  <Image url="@images/logo_ufps.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="168.0" fitWidth="230.0" layoutX="678.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="410.0" AnchorPane.leftAnchor="678.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@images/UGV_SISTEMA.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="228.0" layoutY="36.0" prefHeight="40.0" prefWidth="413.0" text="HACIENDA LA ESPERANZA VEREDA PANTANOS &#10;&#10;" textAlignment="CENTER" AnchorPane.bottomAnchor="503.0" AnchorPane.leftAnchor="228.0" AnchorPane.rightAnchor="286.0" AnchorPane.topAnchor="36.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="164.0" prefHeight="40.0" prefWidth="202.0" text="Selecciona el rango de fecha:&#10;&#10;" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="363.0" layoutY="163.0" prefHeight="40.0" prefWidth="48.0" text="hasta:&#10;&#10;" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="ComboFechaAnalisis" focusColor="#ffffff00" layoutX="245.0" layoutY="171.0" onAction="#BotonFechaAnalisis" prefHeight="25.0" prefWidth="109.0" promptText="AA/MM/DD" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5; -fx-background-radius: 10;" unFocusColor="#4d4d4d00">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+            <JFXButton fx:id="BotonAceptarAnalisis" disable="true" layoutX="553.0" layoutY="168.0" onAction="#Aceptar" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5; -fx-background-radius: 10;" text="Aceptar">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXComboBox fx:id="ComboFechaAnalisisDos" disable="true" focusColor="#ffffff00" layoutX="421.0" layoutY="171.0" onAction="#BotonFechaAnalisisDos" prefHeight="25.0" prefWidth="109.0" promptText="AA/MM/DD" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5; -fx-background-radius: 10;" unFocusColor="#4d4d4d00">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+            <JFXRadioButton fx:id="TempRadioButton" disable="true" layoutX="10.0" layoutY="226.0" onAction="#ActivarBotones" text="Temperatura del Aire">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXRadioButton>
+            <JFXRadioButton fx:id="HumRadioButton" disable="true" layoutX="10.0" layoutY="258.0" onAction="#ActivarBotones" text="Humedad del Aire">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="CO2RadioButton" disable="true" layoutX="10.0" layoutY="290.0" onAction="#ActivarBotones" text="Dióxido de Carbono">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="SueloRadioButton" disable="true" layoutX="10.0" layoutY="321.0" onAction="#ActivarBotones" text="Humedad del Suelo">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="UVRadioButton" disable="true" layoutX="10.0" layoutY="351.0" onAction="#ActivarBotones" text="Índice UV">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXRadioButton>
+            <AnchorPane fx:id="DiagramaPanel" layoutX="173.0" layoutY="210.0" prefHeight="340.0" prefWidth="733.0">
+               <children>
+                  <BarChart fx:id="DiagramaEstadis" layoutX="54.0" layoutY="14.0" prefHeight="313.0" prefWidth="579.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <Label fx:id="UnidadTempEstad" layoutX="21.0" layoutY="110.0" prefHeight="40.0" prefWidth="55.0" rotate="-90.0" text="TA (°C)" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="UnidadHumEstad" layoutX="21.0" layoutY="110.0" prefHeight="40.0" prefWidth="55.0" rotate="-90.0" text="HA (%)" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="UnidadCO2Estad" layoutX="21.0" layoutY="110.0" prefHeight="40.0" prefWidth="74.0" rotate="-90.0" text="CO2 (ppm)" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="UnidadSueloEstad" layoutX="21.0" layoutY="110.0" prefHeight="40.0" prefWidth="48.0" rotate="-90.0" text="HS (%)" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="UnidadUVEstad" layoutX="35.0" layoutY="110.0" prefHeight="40.0" prefWidth="34.0" rotate="-90.0" text="IUV" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="UnidadTiempoEstad" layoutX="622.0" layoutY="228.0" prefHeight="40.0" prefWidth="55.0" text="Tiempo&#10;(Día)" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="EstadisticaPanel" layoutX="176.0" layoutY="210.0" prefHeight="340.0" prefWidth="734.0" visible="false">
+               <children>
+                  <TableView fx:id="TablaAnalisisEstadistico" layoutY="12.0" prefHeight="299.0" prefWidth="743.0">
+                    <columns>
+                      <TableColumn fx:id="diaAnalisis" prefWidth="97.0" text="Día">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons_calendario.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></TableColumn>
+                      <TableColumn fx:id="mediaAnalisis" text="Media">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons_media.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></TableColumn>
+                        <TableColumn fx:id="medianaAnalisis" prefWidth="92.0" text="Mediana">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons_mediana.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></TableColumn>
+                        <TableColumn fx:id="modaAnalisis" prefWidth="78.0" text="Moda">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons_moda.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></TableColumn>
+                        <TableColumn fx:id="minAnalisis" prefWidth="65.0" text="Min">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons_minimo.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></TableColumn>
+                        <TableColumn fx:id="maxAnalisis" prefWidth="79.0" text="Max">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons_maximo.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></TableColumn>
+                        <TableColumn fx:id="rangoAnalisis" prefWidth="77.0" text="Rango">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons_rango.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></TableColumn>
+                        <TableColumn fx:id="desEstandarAnalisis" prefWidth="89.0" text="Desviación &#10;Estandar">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons_desviacion.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></TableColumn>
+                        <TableColumn fx:id="varianzaAnalisis" prefWidth="85.0" text="Varianza">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons_varianza.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></TableColumn>
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="DiagramaBoton" disable="true" layoutX="54.0" layoutY="436.0" onAction="#BotonDiagramaEstadistica" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5;" text="Diagrama">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="TablaestadisticaBoton" disable="true" layoutX="68.0" layoutY="395.0" onAction="#BotonTablaEstadistica" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5;" text="Tabla">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ayudaPanel" layoutX="40.0" layoutY="40.0" prefHeight="583.0" prefWidth="927.0" style="-fx-background-color: #ffffff;" visible="false" AnchorPane.bottomAnchor="83.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="40.0" prefWidth="423.0" text="HACIENDA LA ESPERANZA VEREDA PANTANOS &#10;&#10;" textAlignment="CENTER" AnchorPane.bottomAnchor="505.0" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="259.0" AnchorPane.topAnchor="34.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="154.0" fitWidth="202.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="12.0">
+               <image>
+                  <Image url="@images/logo_ufps.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="168.0" fitWidth="230.0" layoutX="678.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="410.0" AnchorPane.leftAnchor="678.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@images/UGV_SISTEMA.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="256.0" layoutY="91.0" prefHeight="40.0" prefWidth="402.0" text="AYUDA PARA EL MANEJO DE LA INTERFAZ" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="Botonbase" fitHeight="43.0" fitWidth="40.0" layoutX="108.0" layoutY="272.0" onMouseClicked="#Botonbase" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons_base.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="13.0" layoutY="271.0" onMouseClicked="#Botonbase" prefHeight="41.0" prefWidth="100.0" text="Base de datos" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fx:id="BotonGeneral" fitHeight="43.0" fitWidth="40.0" layoutX="108.0" layoutY="218.0" onMouseClicked="#BotonGeneral" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons_información.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="23.0" layoutY="217.0" onMouseClicked="#BotonGeneral" text="Información&#10;general" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fx:id="Botonmapa" fitHeight="43.0" fitWidth="40.0" layoutX="108.0" layoutY="371.0" onMouseClicked="#Botonmapa" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons_mapa.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="37.0" layoutY="371.0" onMouseClicked="#Botonmapa" text="Mapa de &#10;intensidad" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fx:id="Botongraf" fitHeight="43.0" fitWidth="40.0" layoutX="108.0" layoutY="429.0" onMouseClicked="#Botongraf" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons_graficar.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="46.0" layoutY="439.0" onMouseClicked="#Botongraf" text="Gráficas" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fitHeight="43.0" fitWidth="40.0" layoutX="108.0" layoutY="483.0" onMouseClicked="#Botonestad" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons_estadistica.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="38.0" layoutY="493.0" onMouseClicked="#Botonestad" text="Estadística" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fx:id="baseFlecha" fitHeight="25.0" fitWidth="9.0" layoutX="149.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/icons_flechaa.png" />
+               </image>
+            </ImageView>
+            <ScrollPane fx:id="basePanel" layoutX="159.0" layoutY="198.0" prefHeight="351.0" prefWidth="711.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 3;" visible="false">
+               <content>
+                  <AnchorPane prefHeight="758.0" prefWidth="684.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label alignment="TOP_CENTER" layoutX="7.0" layoutY="4.0" prefHeight="72.0" prefWidth="680.0" text="En esta ventana se observan los datos adquiridos por el SEMANT en/a tiempo real, así mismo permite &#10;seleccionar un rango de fechas anteriores, donde los valores adecuados para las variables medidas &#10;son:" textAlignment="JUSTIFY">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_RIGHT" layoutX="15.0" layoutY="68.0" prefHeight="105.0" prefWidth="213.0" style="-fx-border-style: dashed; -fx-border-width: 2.5;" text="Temperatura del aire &#10;Max: 35 °C &#10;Min: 17 °C " textAlignment="RIGHT">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="72.0" fitWidth="55.0" layoutX="18.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_temperatura.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="TOP_RIGHT" layoutX="242.0" layoutY="130.0" prefHeight="105.0" prefWidth="213.0" style="-fx-border-style: dashed; -fx-border-width: 2.5;" text="Humedad del aire &#10;Max: 75% &#10;Min: 65% " textAlignment="RIGHT">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="90.0" fitWidth="79.0" layoutX="237.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_humedad.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton layoutX="91.0" layoutY="141.0" onAction="#VermasTemp" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5;-fx-background-radius: 10;" text="Ver más">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="317.0" layoutY="203.0" onAction="#VermasHum" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5;-fx-background-radius: 10;" text="Ver más">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <Label alignment="TOP_RIGHT" layoutX="14.0" layoutY="208.0" prefHeight="105.0" prefWidth="213.0" style="-fx-border-style: dashed; -fx-border-width: 2.5;" text="Dióxido de Carbono &#10;Max: 1000 ppm &#10;Min: 400 ppm " textAlignment="RIGHT">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="72.0" fitWidth="55.0" layoutX="17.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_co2.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton layoutX="90.0" layoutY="281.0" onAction="#VermasCO2" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5; -fx-background-radius: 10;" text="Ver más">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <Label alignment="TOP_RIGHT" layoutX="465.0" layoutY="68.0" prefHeight="105.0" prefWidth="213.0" style="-fx-border-style: dashed; -fx-border-width: 2.5;" text="Índice Ultravioleta &#10;Max: 10&#10;Min:  3" textAlignment="RIGHT">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="465.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_indiceuv.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton layoutX="540.0" layoutY="141.0" onAction="#VermasUV" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5; -fx-background-radius: 10;" text="Ver más">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <Label alignment="CENTER" layoutX="464.0" layoutY="208.0" prefHeight="105.0" prefWidth="213.0" style="-fx-border-style: dashed; -fx-border-width: 2.5;" text="Latitud  Longitud" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="72.0" fitWidth="55.0" layoutX="508.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_longitud.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="72.0" fitWidth="55.0" layoutX="572.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_latitud.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton layoutX="540.0" layoutY="281.0" onAction="#VermasGPS" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5; -fx-background-radius: 10;" text="Ver más">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <Label alignment="TOP_CENTER" layoutX="7.0" layoutY="342.0" prefHeight="93.0" prefWidth="680.0" text="La visualización de los datos adquiridos por el SEMANT se observan en una tabla que contiene el &#10;día, hora, variable medida y localización del GPS como se observa en la figura. Por otra parte, si &#10;el sistema se encuentra midiendo en tiempo real la tabla se actualiza a medida que el receptor los &#10;reciba." textAlignment="JUSTIFY">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane fx:id="AyudaTemp" hbarPolicy="NEVER" layoutX="11.0" layoutY="68.0" prefHeight="257.0" prefWidth="679.0" style="-fx-border-color: #000000; -fx-border-width: 1.5; -fx-background-color: #ffffff;" visible="false">
+                           <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="602.0" prefWidth="660.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <JFXButton onAction="#Regresar" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.2; -fx-border-radius: 10; -fx-background-radius: 10;" text="Regresar">
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <Label layoutX="243.0" layoutY="3.0" prefHeight="20.0" prefWidth="159.0" text="Temperatura del aire">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="5.0" layoutY="29.0" prefHeight="205.0" prefWidth="442.0" text="La tempertura del aire es un factor importante en el desarrollo y &#10;crecimiento de un cultivo, debido a que cuando este valor se &#10;encuentra por debajo de 17°C reduce el crecimiento de la planta, &#10;aumenta el número de tomates bocos y reduce la fertilidad del &#10;polem, así mismo, cuando se encuentra en ambientes con tempe-&#10;raturas superiores a los 35°C se puede generar estrés por calor en &#10;el cultivo, baja la calidad de los tomates y las flores en los racimos &#10;disminuye.">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="215.0" fitWidth="213.0" layoutX="436.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/Ayuda_Temp.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="259.0" fitWidth="285.0" layoutX="187.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/Ayuda_Tem_Tabla.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="5.0" layoutY="219.0" prefHeight="89.0" prefWidth="636.0" text="En la tabla se pueden observar los valores de temperatura ideales en el crecimiento y desarrollo &#10;de un cultivo de tomate. Así mismo se encuentra la influencia que estos ejercen sobre la planta.">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                        <ScrollPane fx:id="AyudaHum" hbarPolicy="NEVER" layoutX="11.0" layoutY="68.0" prefHeight="257.0" prefWidth="679.0" style="-fx-border-color: #000000; -fx-border-width: 1.5;" vbarPolicy="NEVER" visible="false">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="252.0" prefWidth="674.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <JFXButton onAction="#Regresar" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.2; -fx-border-radius: 10; -fx-background-radius: 10;" text="Regresar">
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <Label layoutX="270.0" layoutY="4.0" prefHeight="20.0" prefWidth="135.0" text="Humedad del aire">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="215.0" layoutY="34.0" prefHeight="174.0" prefWidth="432.0" text="La humedad del aire es un valor influyente en el cuidado de la &#10;siembra, su valor óptimo es de un 70%, cuando se encuentra &#10;por debajo del 65% las condiciones de la planta empeoran, de-&#10;bido a que el polen no se adhiere al estigma (órgano femenino &#10;de la flor), generando desperdicios significativos; si la humedad &#10;es superior a 75% el polen se aglomera y no viaja de la antera &#10;(órgano masculino de la flor) al estigma.">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="230.0" fitWidth="210.0" layoutX="15.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/Ayuda_Hum.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                        <ScrollPane fx:id="AyudaCO2" hbarPolicy="NEVER" layoutX="11.0" layoutY="68.0" prefHeight="257.0" prefWidth="679.0" style="-fx-border-color: #000000; -fx-border-width: 1.5;" vbarPolicy="NEVER" visible="false">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="250.0" prefWidth="673.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <JFXButton onAction="#Regresar" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 1.2;" text="Regresar">
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <Label layoutX="249.0" layoutY="11.0" prefHeight="25.0" prefWidth="162.0" text="Dióxido de Carbono">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="5.0" layoutY="42.0" prefHeight="174.0" prefWidth="442.0" text="El dióxido de carbono (CO2) influye directamente en el crecimien-&#10;to de la plata, sus niveles recomendables se encuentran entre &#10;400-1000 ppm (partículas por millón). En caso de presentarse un &#10;aumento considerable en la concentración del CO2 se genera &#10;estrés en la planta, disminuyendo la productividad, calidad del &#10;producto y generando desperdicios no deseados. Por otra parte, &#10;niveles bajos de este nutriente reducen la velocidad del proceso &#10;de la fotonsíntesis.">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="222.0" fitWidth="200.0" layoutX="448.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/Ayuda_CO2.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                        <ScrollPane fx:id="AyudaUV" layoutX="11.0" layoutY="68.0" prefHeight="257.0" prefWidth="679.0" style="-fx-border-color: #000000; -fx-border-width: 1.5;" visible="false">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="669.0" prefWidth="658.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <JFXButton onAction="#Regresar" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.2; -fx-border-radius: 10; -fx-background-radius: 10;" text="Regresar">
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <Label layoutX="237.0" layoutY="3.0" prefHeight="20.0" prefWidth="172.0" text="Radiacion Ultravioneta">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="4.0" layoutY="26.0" prefHeight="121.0" prefWidth="466.0" text="La radiación ultravioleta (UV) presente en los rayos solares que llegan &#10;sobre un cultivo de tomate son importantes en el desarrollo del mis-&#10;mo, considerando que una exposición adecuada a estos genera un &#10;mejor rendimiento y crecimiento vegetativo, además, reduce la pérdi-&#10;da de peso y la descomposición de la planta. ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="237.0" fitWidth="183.0" layoutX="471.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/Ayuda_uv.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="296.0" fitWidth="261.0" layoutX="14.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/Ayuda_UV_Tabla.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="281.0" layoutY="400.0" prefHeight="79.0" prefWidth="373.0" text="En la tabla se representa la clasificación de la radiación &#10;ultravioleta respecto a sus longitudes de onda e indices &#10;ultravioleta.&#10;&#10;">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="9.0" layoutY="140.0" prefHeight="253.0" prefWidth="638.0" text="Durante las horas solares el cultivo debe encontrarse expuesto a ra-&#10;diación ultravioleta B (UV-B) (índice UV superior a 3), cuando se &#10;encuentra constantemente expuesto a un valor inferior las células &#10;esponjosas del mesófilo disminuyen su tamaño, número y densidad, &#10;y se origina una acumulación insuficiente de carbohidratos esenciales &#10;para la respiración. Por otra parte, tambien se encuentra la radiación ultravioleta A (UV-A), la &#10;cual beneficia al cultivo en su totalidad (indices UV entre 4 y 10), sin embargo cuando se supe-&#10;ran estos valores puede generar estres por exceso de radiación en la planta provocando: &#10;aumento en la fotorrespiración de la planta afectando su productividad debido al consumo con-&#10;siderable de carbohidratos; fotooxidación por la destrucción de los pigmentos fotosintéticos de-&#10;bido a la alta radiación y sobrecalentamiento de los frutos resultando en una degradación del &#10;licopeno.">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                        <ScrollPane fx:id="AyudaGPS" layoutX="11.0" layoutY="68.0" prefHeight="257.0" prefWidth="679.0" style="-fx-border-color: #000000; -fx-border-width: 1.5;" visible="false">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="251.0" prefWidth="673.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <JFXButton onAction="#Regresar" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.2; -fx-border-radius: 10; -fx-background-radius: 10;" text="Regresar">
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <Label layoutX="181.0" layoutY="4.0" prefHeight="25.0" prefWidth="272.0" text="Sistema de Posicionamiento Global">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="246.0" fitWidth="175.0" layoutX="489.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/Ayuda_GPS.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="4.0" layoutY="26.0" prefHeight="205.0" prefWidth="487.0" text="El sistema de posicionamiento global (GPS) posibilita obtener la ubica-&#10;ción precisa de las mediciones, siendo beneficioso para el agricultor de-&#10;bido a que en caso de encontrar alguna anomalía en un área específica &#10;únicamente se desplaza a ese sector reduciendo el tiempo de trabajo &#10;que consumiría en buscar estas anomalías, además, la implementación &#10;de este sistema permite la realización de mapas de intensidad, para la &#10;estimación de rendimiento por zonas del cultivo y asi mismo obtener un &#10;preciso control y visualización de la ruta diaria y localización en tiempo &#10;real.">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                        <ImageView fitHeight="333.0" fitWidth="649.0" layoutX="22.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Ayuda_Tabla_Base.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content></ScrollPane>
+            <ImageView fx:id="GeneralFlecha" fitHeight="25.0" fitWidth="9.0" layoutX="149.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons_flechaa.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="GeneralPanel" layoutX="159.0" layoutY="198.0" prefHeight="351.0" prefWidth="711.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 3;">
+               <children>
+                  <Label layoutX="77.0" layoutY="14.0" prefHeight="38.0" prefWidth="213.0" text="Sistema de medición y UGV">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="31.0" layoutY="55.0" prefHeight="278.0" prefWidth="305.0" text="Temperatura y Humedad del Aire: DHT22&#10;Dióxido de Carbono: MH-Z19&#10;Humedad del Suelo: SKU-SEN0193&#10;índice Ultravioleta: GROVE UV&#10;&#10;Comunicación: LoRa RF1276&#10;GPS: NEO-6M V2&#10;Puente H: L298N&#10;&#10;Microcontrolador: Arduino Nano&#10;Servomotor: MG995R&#10;Regulador de voltaje: UBEC 5v&#10;Alimentación : Dos baterias de11V" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="146.0" layoutY="42.0" prefHeight="20.0" prefWidth="74.0" text="Sensores&#10;">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="147.0" layoutY="140.0" prefHeight="20.0" prefWidth="74.0" text="Modulos&#10;">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="161.0" layoutY="226.0" prefHeight="20.0" prefWidth="45.0" text="Otros&#10;">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="423.0" layoutY="195.0" prefHeight="38.0" prefWidth="169.0" text="Soporte de la Interfaz">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="382.0" layoutY="65.0" prefHeight="130.0" prefWidth="251.0" text="Julieth Estefania Gutierrez Lopera&#10;Johan Andres Toloza Rangel&#10;&#10;juliethgutierrez1302@hotmail.com&#10;johan_andres_2009@hotmail.com&#10;&#10;" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="462.0" layoutY="55.0" prefHeight="20.0" prefWidth="74.0" text="Creadores&#10;">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="440.0" layoutY="120.0" prefHeight="20.0" prefWidth="135.0" text="Correo Electrónico&#10;">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="382.0" layoutY="224.0" prefHeight="93.0" prefWidth="251.0" text="Software Educativo e Informativo&#10;Programación en Java &#10;Versión 1.0&#10;Año de creación: 2021" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="453.0" layoutY="14.0" prefHeight="38.0" prefWidth="92.0" text="Contáctanos">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="mapaFlecha" fitHeight="25.0" fitWidth="9.0" layoutX="149.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/icons_flechaa.png" />
+               </image>
+            </ImageView>
+            <ScrollPane fx:id="mapaPanel" layoutX="159.0" layoutY="198.0" prefHeight="351.0" prefWidth="711.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 3;" visible="false">
+               <content>
+                  <AnchorPane prefHeight="549.0" prefWidth="688.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label alignment="TOP_CENTER" layoutX="7.0" prefHeight="216.0" prefWidth="674.0" text="En esta ventana se realizan los mapas de intensidad para visualizar las mediciones empleando la &#10;localización del GPS, esto le permite al agricultor desplazarse únicamente a las ubicaciones que &#10;presenten alguna anomalia en cualquiera de las variables. Cabe resaltar que estos mapas se gene-&#10;ran solamente por día.&#10;&#10;A continuación se presenta un ejemplo de mapa de intesidad generado para la variable tempera-&#10;tura, como se puede observar en la imagen cada medición se representa con su respectivo color &#10;de acuerdo a la tabla de valores, los valores criticos se representan con los colores naranja y rojo, &#10;mientras que los valores adecuados tienen diversos tonos de verde, este patrón de colores es utili-&#10;zado para todas las demás variables medidas.">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="351.0" fitWidth="658.0" layoutX="7.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Ayuda_Mapas.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <ScrollPane fx:id="grafPanel" layoutX="159.0" layoutY="198.0" prefHeight="351.0" prefWidth="711.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 3;" visible="false">
+               <content>
+                  <AnchorPane prefHeight="885.0" prefWidth="690.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label alignment="TOP_LEFT" layoutX="8.0" layoutY="6.0" prefHeight="105.0" prefWidth="673.0" text="Esta ventana permite graficar los datos adquiridos por el SEMANT en/a tiempo real o de un rango de &#10;fechas anteriores,  el objetivo es visualizar el comportamiento de los datos en el trasncurso del tiem-&#10;po y observar puntos criticos presentes en las variables medidas. &#10;&#10;A continuación se representa un ejemplo para cada tipo de gráfica generada:" textAlignment="JUSTIFY">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="282.0" fitWidth="648.0" layoutX="15.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Ayuda_Grafica.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="119.0" prefHeight="24.0" prefWidth="361.0" text="GRAFICA POR BASE DE DATOS" textAlignment="JUSTIFY">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="8.0" layoutY="143.0" prefHeight="90.0" prefWidth="672.0" text="En ella se pueden graficar los datos almacenados en la base de datos, para esto es necesario definir &#10;un rango de fechas, posteriormente se escoge una opción de la sección de selección de variables, &#10;además cada una de las fechas se distingue con colores diferentes, permitiendo diferenciar el com-&#10;portamiento de la variable de acuerdo a la fecha, como se observa en la figura.&#10;" textAlignment="JUSTIFY">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="15.0" layoutY="523.0" prefHeight="24.0" prefWidth="361.0" text="GRÁFICA A TIEMPO REAL" textAlignment="JUSTIFY">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="547.0" prefHeight="90.0" prefWidth="658.0" text="En ella se grafican todas las variables simultaneamente como se observa en la figura, esta grafica &#10;se actualiza a medida que el sistema de monitoreo realiza la medición de variables permitiendole &#10;al agricultor visualizar a tiempo real el cultivo." textAlignment="JUSTIFY">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="276.0" fitWidth="635.0" layoutX="23.0" layoutY="615.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Ayuda_Grafica_real.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content></ScrollPane>
+            <ImageView fx:id="grafFlecha" fitHeight="25.0" fitWidth="9.0" layoutX="149.0" layoutY="441.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/icons_flechaa.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="estadFlecha" fitHeight="25.0" fitWidth="9.0" layoutX="149.0" layoutY="499.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/icons_flechaa.png" />
+               </image>
+            </ImageView>
+            <ScrollPane fx:id="AyudaEstadistica" layoutX="159.0" layoutY="198.0" prefHeight="351.0" prefWidth="711.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 3;" visible="false">
+               <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1185.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <JFXButton layoutX="6.0" layoutY="1.0" onAction="#RegresarEstadistica" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.2; -fx-border-radius: 10; -fx-background-radius: 10;" text="Regresar">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <Label layoutX="351.0" layoutY="35.0" prefHeight="20.0" prefWidth="55.0" text="Media">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="69.0" prefHeight="152.0" prefWidth="666.0" text="Se representa como la suma de todos los datos divido en la cantidad de datos. Conocer la media &#10;en un conjunto de datos permite normalizarlos, especialmente en poblaciones muy grandes, la&#10;media posibilita observar la tendencia de la información y tomar decisiones en base a ella sin re-&#10;currir al grupo extenso de datos; además, minimiza el error en la predicción de cualquier valor &#10;del conjunto de datos, es decir, en condiciones similares a la muestra se esperaría que el próximo &#10;dato se encuentre cercano a la ella. Sin embargo, como desventaja la media es afectada por valo-&#10;res atípicos, lo cual puede sesgar su magnitud.">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="61.0" fitWidth="67.0" layoutX="290.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_media.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="345.0" layoutY="237.0" prefHeight="20.0" prefWidth="67.0" text="Mediana">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="273.0" prefHeight="105.0" prefWidth="666.0" text="Se representa como el dato central con los datos ordenados de menor a mayor. La mediana es es-&#10;pecialmente utilizada cuando el conjunto de datos no es simétrico, debido a que en ella es más &#10;importante la posición que el valor del elemento y, a diferencia de la media, se ve menos afecta-&#10;da por los datos atípicos y sesgados. Considerando lo anterior, al observar datos asimétricos o &#10;dispersos la mejor opción para conocer la tendencia de la información es la mediana.">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="55.0" fitWidth="58.0" layoutX="290.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_mediana.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="345.0" layoutY="395.0" prefHeight="20.0" prefWidth="48.0" text="Moda">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="430.0" prefHeight="105.0" prefWidth="666.0" text="Se representa como el dato mas repetido en la serie. La moda es especialmente importante cuan-&#10;do el conjunto de datos no es numérico, por ejemplo, los colores de las mediciones en un mapa &#10;de intensidad y, al igual que la mediana, la moda tampoco se ve afectada por valores extremos &#10;cuando el conjunto es numérico. Sin embargo, puede haber más de una moda, o puede no haber &#10;ninguna, lo que significa que la moda no siempre es representativa de los datos.">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="55.0" fitWidth="58.0" layoutX="290.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_moda.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="299.0" layoutY="553.0" prefHeight="20.0" prefWidth="140.0" text="Mínimo y Máximo">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="585.0" prefHeight="105.0" prefWidth="666.0" text="El mínimo se representa como la medida de menor valor en la serie de datos y el máximo se re-&#10;presenta como la medida de menor valor en la serie de datos. Encontrar esto valores permiten &#10;conocer anomalías en una serie de datos y, por ende, comenzar a identificar las condiciones en &#10;la que se producen estos picos para observar errores en la toma de datos y (en caso de requerir-&#10;se) corregirlos.">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="55.0" fitWidth="58.0" layoutX="244.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_minimo.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="55.0" fitWidth="58.0" layoutX="439.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_maximo.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="345.0" layoutY="701.0" prefHeight="20.0" prefWidth="48.0" text="Rango">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="55.0" fitWidth="58.0" layoutX="290.0" layoutY="683.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_rango.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="13.0" layoutY="726.0" prefHeight="105.0" prefWidth="666.0" text="Se representa como la diferencia entre el valor mayor y menor. Este permite obtener una idea rá-&#10;pida de la variabilidad o separación en un conjunto de datos; por lo tanto, no mide la dispersión &#10;de la mayoría de los valores de un conjunto de datos, sino únicamente entre los valores máximos &#10;y mínimos.&#10;">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="235.0" layoutY="833.0" prefHeight="20.0" prefWidth="238.0" text="Varianza y Desviación Estandar">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="50.0" fitWidth="48.0" layoutX="189.0" layoutY="815.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_varianza.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="45.0" fitWidth="41.0" layoutX="473.0" layoutY="812.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_desviacion.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="13.0" layoutY="864.0" prefHeight="313.0" prefWidth="666.0" text="Estás dos medidas estadísticas permiten observar con mayor precisión el nivel de variabilidad en &#10;un conjunto de datos respecto a la media, es decir, cuando estos valores son altos la información &#10;se encuentra muy dispersa, mientras que, valores pequeños indican estabilidad en los datos. La &#10;diferencia entre ellas es que la varianza representa la unidad de medida al cuadrado, mientras &#10;que, la desviación estándar es la raíz cuadrada de la varianza, por lo tanto, representa la unidad &#10;de medida en su valor absoluto.&#10;&#10;Ejemplo: Una muestra de 100 mediciones de temperatura arroja una media de 29.6, al momento &#10;de calcular la desviación estándar resulta un valor de 0.345, esto indica que las mediciones va-&#10;rían en valores entre 29.6 ± 0.345, es decir la temperatura de la zona es estable debido a la ten-&#10;dencia de los datos muestreados. &#10;Por otra parte, se realiza un nuevo grupo de 100 mediciones en otra zona, arrojando una media &#10;de 31.4, al momento de calcular la desviación estándar resulta un valor de 9.21, esto indica que &#10;las mediciones varían en valores entre 31.4 ± 9.21, es decir la temperatura de la zona es inesta-&#10;ble debido a la variabilidad de los datos muestreados.">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <ScrollPane fx:id="estadPanel" layoutX="159.0" layoutY="198.0" prefHeight="351.0" prefWidth="711.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 3;" visible="false">
+               <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="957.0" prefWidth="689.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label alignment="TOP_CENTER" layoutX="15.0" layoutY="6.0" prefHeight="299.0" prefWidth="658.0" text="Esta ventana contiene los calculos estadísticos de las variables agroambientales adquiridas por el &#10;SEMANT. Las medidas estadísticas que se calculan son:  media, mediana, moda, mínimo, máximo, &#10;rango, desviación estandar y varianza, si desea saber más sobre éstas ingrese a &quot;Ver más&quot;.&#10;&#10;&#10;El objetivo de estos calculos estadísticos es la clasificación, organización, analisis e interpretación &#10;de los datos observados en la tabla y los gráficos estadísticos, esto permite comparar entre diferen-&#10;tes series de datos y estimar la probabilidad de éxito que tiene cada una de las decisiones posibles.&#10;&#10;Para realizar los calculos estadísticos se requiere seleccionar una variable y una o un rango de fe-&#10;chas; los resultados se representan por fecha, al seleccionar más de una fecha se observan los cal-&#10;culos estadisticos de todos los datos en ese rango al final de la tabla como se observa en la &#10;siguiente figura." textAlignment="JUSTIFY">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXButton layoutX="566.0" layoutY="76.0" onAction="#VermasEstadistica" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.8;-fx-background-radius: 10;" text="Ver más">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="368.0" fitWidth="646.0" layoutX="12.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Ayuda_Tabla_Estadistica.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="TOP_CENTER" layoutX="15.0" layoutY="581.0" prefHeight="74.0" prefWidth="658.0" text="El diagrama de barras únicamente representa los cálculos estadísticos de media, mediana, moda, &#10;maximo y minimo en cada una de las fechas seleccionadas, los cálculos se representan por un &#10;color especifico como se observa en la siguiente figura. " textAlignment="JUSTIFY">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="368.0" fitWidth="646.0" layoutX="18.0" layoutY="646.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Ayuda_Diagrama_Estadistica.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content></ScrollPane>
+            <Label layoutX="79.0" layoutY="152.0" prefHeight="38.0" prefWidth="497.0" text="Seleccione el Icono que desee consultar su funcionalidad:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="43.0" fitWidth="40.0" layoutX="108.0" layoutY="318.0" onMouseClicked="#BotonSueloAyud" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons_tierra.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="10.0" layoutY="318.0" onMouseClicked="#BotonSueloAyud" text="Características &#10;del suelo" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fx:id="SueloFlecha" fitHeight="25.0" fitWidth="9.0" layoutX="149.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/icons_flechaa.png" />
+               </image>
+            </ImageView>
+            <ScrollPane fx:id="AyudSueloPanel" layoutX="159.0" layoutY="198.0" prefHeight="351.0" prefWidth="711.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 3;" visible="false">
+               <content>
+                  <AnchorPane prefHeight="662.0" prefWidth="694.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label alignment="TOP_CENTER" layoutX="7.0" layoutY="6.0" prefHeight="72.0" prefWidth="687.0" text="En esta ventana se almacenan las respectivas mediciones de la humedad del suelo adquiridos por el &#10;SEMANT, permite seleccionar un rango de fechas anteriores, donde los valores adecuados para las &#10;variables medidas son:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="351.0" fitWidth="658.0" layoutX="8.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Ayuda_Mapas.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="TOP_RIGHT" layoutX="230.0" layoutY="78.0" prefHeight="105.0" prefWidth="213.0" style="-fx-border-style: dashed; -fx-border-width: 2.5;" text="Humedad del suelo &#10;Max: 40% &#10;Min: 25% " textAlignment="RIGHT">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="72.0" fitWidth="55.0" layoutX="238.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons_seco.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton layoutX="305.0" layoutY="145.0" onAction="#VermasSuelo" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.5; -fx-background-radius: 10;" text="Ver más">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <Label alignment="TOP_CENTER" layoutX="7.0" layoutY="203.0" prefHeight="80.0" prefWidth="687.0" text="Para la visualización de los datos de la humedad del suelo se implementa una tabla que permite ver &#10;los datos con su respectivo dia, hora y ubicación de la medición; además de generar una grafica de &#10;linea con las mediciones según el rango seleccionado como se puede observa en siguiente figura.">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content></ScrollPane>
+            <AnchorPane fx:id="AyudaSuelo" layoutX="159.0" layoutY="198.0" minHeight="0.0" minWidth="0.0" prefHeight="351.0" prefWidth="711.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 3;" visible="false">
+               <children>
+                  <JFXButton layoutX="29.0" layoutY="10.0" onAction="#Regresar" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.2; -fx-border-radius: 10; -fx-background-radius: 10;" text="Regresar">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label layoutX="366.0" layoutY="13.0" prefHeight="26.0" prefWidth="162.0" text="Humedad del Suelo">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="220.0" layoutY="34.0" prefHeight="278.0" prefWidth="479.0" text="Monitorear la humedad del suelo le permite al agricultor regar unica-&#10;mente zonas especificas del cultivo de acuerdo a las necesidades; ob-&#10;tener una medida superior a 90% en esta variable indica que el suelo &#10;se encuentra en saturación, causando marchitación de las raices, retra-&#10;sando la floración, reduciendo el nivel de oxígeno en el suelo y de ab-&#10;sorción de los nutrientes, esto aumenta la susceptibilidad a enferme-&#10;dades de tipo bacteriano y fúngico. Por otra parte, un valor inferior a &#10;70% indica que el suelo está seco, ocasionando estrés hídrico, redu-&#10;ciendo el tamaño de los frutos y la coloración de las hojas se vuelven &#10;amarilllentas o violetas, además el suelo se pulveriza demasiado des-&#10;truyendo su estructura. Todos estos factores generarían una menor &#10;productividad del cultivo derivando en perdidas para el agricultor. &#10; &#10;&#10;">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="222.0" fitWidth="202.0" layoutX="14.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Ayuda_Suelo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <ImageView fx:id="inicioFlecha" fitHeight="19.0" fitWidth="20.0" layoutX="49.0" layoutY="579.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="72.3333330154419" AnchorPane.leftAnchor="49.0" AnchorPane.rightAnchor="858.0" AnchorPane.topAnchor="579.0">
+         <image>
+            <Image url="@images/icons_flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="basededatosFlecha" fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="72.3333330154419" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="755.0" AnchorPane.topAnchor="579.0">
+         <image>
+            <Image url="@images/icons_flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="CaracteristicasdelSueloFlecha" fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="72.3333330154419" AnchorPane.leftAnchor="282.0" AnchorPane.rightAnchor="752.0" AnchorPane.topAnchor="579.0">
+         <image>
+            <Image url="@images/icons_flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mapadeintensidadFlecha" fitHeight="19.0" fitWidth="20.0" layoutX="443.0" layoutY="579.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="72.3333330154419" AnchorPane.leftAnchor="435.0" AnchorPane.rightAnchor="464.0" AnchorPane.topAnchor="579.0">
+         <image>
+            <Image url="@images/icons_flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="graficasFlecha" fitHeight="19.0" fitWidth="20.0" layoutX="573.0" layoutY="579.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="72.3333330154419" AnchorPane.leftAnchor="570.0" AnchorPane.rightAnchor="334.0" AnchorPane.topAnchor="579.0">
+         <image>
+            <Image url="@images/icons_flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="estadisticaFlecha" fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="72.3333330154419" AnchorPane.leftAnchor="675.0" AnchorPane.rightAnchor="752.0" AnchorPane.topAnchor="579.0">
+         <image>
+            <Image url="@images/icons_flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ayudaFlecha" fitHeight="19.0" fitWidth="20.0" layoutX="779.0" layoutY="579.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="72.3333330154419" AnchorPane.leftAnchor="773.0" AnchorPane.rightAnchor="128.0" AnchorPane.topAnchor="579.0">
+         <image>
+            <Image url="@images/icons_flecha.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="ErrorPanel" layoutX="352.0" layoutY="256.0" prefHeight="160.0" prefWidth="305.0" style="-fx-background-color: #C0C0C0; -fx-border-color: #000000; -fx-border-width: 2;" visible="false">
+         <children>
+            <Label layoutX="39.0" layoutY="72.0" prefHeight="61.0" prefWidth="228.0" text="Por favor conectar el dispositivo&#10;de recepción en el computador" textAlignment="CENTER">
+               <font>
+                  <Font name="Times New Roman " size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="105.0" fitWidth="80.0" layoutX="113.0" layoutY="6.0" onMouseClicked="#botonInicio" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons_ERROR.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <JFXButton layoutX="131.0" layoutY="130.0" onAction="#BotonError" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 1.8; -fx-background-radius: 10;" text="OK">
+               <font>
+                  <Font name="Times New Roman " size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
